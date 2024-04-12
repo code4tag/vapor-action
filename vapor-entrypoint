@@ -11,8 +11,7 @@ ssh-keyscan -H gitlab.com >> $HOME/.ssh/known_hosts 2> /dev/null
 
 if [ ${GITHUB_NEW_SECRET} ]; then 
     echo "Setting up new format Github OAuth token"
-    composer config --global http-basic.github.com.username ${GITHUB_USERNAME}
-    composer config --global http-basic.github.com.password ${GITHUB_NEW_SECRET}
+    composer config --global http-basic.github.com "${GITHUB_USERNAME}" "${GITHUB_NEW_SECRET}"
 elif [ ${GITHUB_SECRET} ]; then
     echo "Setting up Github OAuth token"
     composer config --global github-oauth.github.com ${GITHUB_SECRET}
