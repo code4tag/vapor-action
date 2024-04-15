@@ -1,4 +1,4 @@
-FROM teamnovu/laravel-vapor:latest
+FROM code4tag/laravel-vapor:latest
 
 LABEL repository="https://github.com/teamnovu/vapor-action"
 LABEL homepage="https://github.com/teamnovu/vapor-action"
